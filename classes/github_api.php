@@ -31,7 +31,7 @@ class Github_API {
     {
         $this->_credentials = $user.':'.$password;
 
-        curl_setopt($curl, CURLOPT_USERPWD, $this->_credentials);
+        curl_setopt($this->_curl, CURLOPT_USERPWD, $this->_credentials);
 
         return $this;
     }
