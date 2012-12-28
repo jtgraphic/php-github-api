@@ -87,7 +87,7 @@ class Github_API {
 
     public function get_pull_requests($state = 'open')
     {
-        $this->_endpoint = 'https://api.github.com/repos/'.$this->_organization.'/'.$this->_repo.'/pulls?state='.$state
+        $this->_endpoint = 'https://api.github.com/repos/'.$this->_organization.'/'.$this->_repo.'/pulls?state='.$state;
         $this->_method = 'GET';
 
         curl_setopt($this->_curl, CURLOPT_URL, $this->_endpoint);
